@@ -1,7 +1,6 @@
 # Classifying cyber-fraud reports — CAS project code
 
-Hierarchical few-shot classification of cyber-fraud reports
-(compact encoder vs local LLM). See the report for details.
+Hierarchical few-shot classification of cyber-fraud reports.
 
 ## Requirements
 
