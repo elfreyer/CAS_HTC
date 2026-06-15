@@ -13,7 +13,7 @@ Hierarchical few-shot classification of cyber-fraud reports
 ### 1. Get the repository
 
 ```bash
-git clone https://github.com/<account>/<repo>.git
+git clone https://github.com/elfreyer/CAS_HTC.git
 cd <repo>
 ```
 
