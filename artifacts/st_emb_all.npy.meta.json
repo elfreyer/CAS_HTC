@@ -1,0 +1,1 @@
+{"model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2", "max_seq_length": 128, "normalize": true, "n_texts": 234, "texts_sha256": "c3fc7d89a39fce1f85e61ca6dc50e4fb08ac12aef0a39b36c8e9b9cce155af20"}

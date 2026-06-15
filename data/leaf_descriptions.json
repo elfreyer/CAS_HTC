@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "description": "Single source of truth for leaf descriptions used in 03 prompts (condition R0b).",
+    "schema_version": "1.0",
+    "n_leaves": 13,
+    "fields": {
+      "general": "Plain-text definition of the leaf, used in prompt's description block.",
+      "indicators": "List of distinctive features used by the LLM to disambiguate."
+    }
+  },
+  "leaves": {
+    "Phishing/Classified-Ad-Phishing": {
+      "general": "Phishing scams targeting users of classified ad platforms (Anibis, Tutti, Ricardo). The scammer poses as a buyer or seller and uses fake payment or delivery confirmation to steal credentials or money.",
+      "indicators": [
+        "References to selling/buying on Tutti, Anibis, Ricardo",
+        "Move conversation to WhatsApp or SMS",
+        "Fake postage/delivery payment links",
+        "Small CHF amount requested (postage, customs)"
+      ]
+    },
+    "Phishing/Parcel-Notification-Phishing": {
+      "general": "Fake parcel delivery notifications impersonating DPD, Swiss Post, DHL, UPS. Victim is asked to pay a small fee for redelivery or confirm address.",
+      "indicators": [
+        "Carrier names: DPD, Swiss Post, DHL, UPS, FedEx",
+        "Small redelivery fees (1-5 CHF)",
+        "Tracking number references",
+        "Urgency about missed delivery"
+      ]
+    },
+    "Phishing/Refund-Phishing": {
+      "general": "Fake refund notifications from health insurance, transport services, tax authorities, or banks (CSS, Helsana, SwissPass, SBB, Steuerverwaltung). Requests bank details to receive a refund.",
+      "indicators": [
+        "Refund amount mentioned (typically CHF 100-500)",
+        "Health insurance, SBB, tax authority, bank impersonation",
+        "Click link to claim refund",
+        "Bank credentials or card details requested"
+      ]
+    },
+    "Phishing/Other-Phishing": {
+      "general": "Generic phishing not fitting other categories: bank account verification, government service impersonation, social media/email account compromise warnings, SwissID, etc.",
+      "indicators": [
+        "Generic 'account verification needed' emails",
+        "SwissID, banks (UBS, PostFinance, Raiffeisen) impersonation",
+        "Account suspension/closure threats",
+        "Government services (eIDAS, AHV)"
+      ]
+    },
+    "Phishing/Vishing/Callback-Scam": {
+      "general": "Phishing where the victim receives a FAKE INVOICE OR CHARGE notification (email or SMS) and is prompted to CALL BACK a phone number where scammers operate. Victim initiates the call.",
+      "indicators": [
+        "Email/SMS announcing a charge already made",
+        "Phone number to call for cancellation/dispute",
+        "Fake invoice numbers, subscription renewals",
+        "Apple, Norton, McAfee, PayPal impersonation often used",
+        "Victim calls back the scammer"
+      ]
+    },
+    "Phishing/Vishing/Other-Vishing": {
+      "general": "Voice phishing where THE SCAMMER CALLS the victim directly, impersonating bank, police, government agency, tech support. Victim does NOT initiate the call.",
+      "indicators": [
+        "Cold phone calls from spoofed numbers",
+        "Impersonation of police, customs, bank, EWZ, court",
+        "Pressure to transfer money or share credentials",
+        "Foreign accent often noted",
+        "Scammer initiates the call to victim"
+      ]
+    },
+    "Malware/Ransomware": {
+      "general": "Malicious software encrypting victim's files or systems and demanding cryptocurrency ransom for decryption keys or to prevent data leak.",
+      "indicators": [
+        "Files renamed with unusual extensions (.lockbit, .conti, .akira)",
+        "Ransom notes (README.txt) in folders",
+        "Bitcoin/Monero ransom demands with deadlines",
+        "Ransomware family names: LockBit, BlackCat, Conti, Akira",
+        "Tor .onion contact addresses"
+      ]
+    },
+    "Fraud/Fake-Sextortion/With-Password": {
+      "general": "Extortion emails claiming hacked webcam/device, EXPLICITLY MENTIONING a real or leaked password of the victim as proof of compromise. Demands Bitcoin payment.",
+      "indicators": [
+        "Email contains the victim's actual or leaked password",
+        "Claims of webcam recording, browsing history capture",
+        "Bitcoin/cryptocurrency wallet address",
+        "48-72h payment deadline",
+        "Threats to send compromising material to contacts"
+      ]
+    },
+    "Fraud/Fake-Sextortion/Other-Fake-Sextortion": {
+      "general": "Generic extortion emails claiming compromising material/webcam access WITHOUT mentioning any specific password. Demands payment in cryptocurrency.",
+      "indicators": [
+        "Claims of webcam capture, browsing tracking",
+        "NO password mentioned (key distinction from With-Password)",
+        "Bitcoin/crypto wallet for payment",
+        "Threats to send material to family/contacts",
+        "May claim email sent 'from your own account' (header spoofing)"
+      ]
+    },
+    "Fraud/Fake-Support/Popup": {
+      "general": "Tech support scam INITIATED BY A POPUP or fake browser alert claiming infection. Popup prompts victim to call a fake support number.",
+      "indicators": [
+        "Web popup or full-screen browser alert",
+        "Claims of virus/malware detection",
+        "Phone number displayed for support",
+        "Microsoft, Apple, Windows Defender impersonation",
+        "Victim is browsing when popup appears"
+      ]
+    },
+    "Fraud/Fake-Support/Other-Fake-Support": {
+      "general": "Tech support scam where SCAMMER CONTACTS victim via PHONE or EMAIL (not popup). Pretends to be Microsoft, Apple, ISP technical support.",
+      "indicators": [
+        "Cold phone calls from 'tech support'",
+        "Indian/Asian accent often mentioned",
+        "Requests remote access via TeamViewer/AnyDesk",
+        "Microsoft, Apple impersonation",
+        "Scammer initiates contact (not via popup)"
+      ]
+    },
+    "Fraud/Investment-Fraud/Pig-Butchering": {
+      "general": "Long-con scam combining ROMANCE + CRYPTOCURRENCY investment. Scammer builds trust through dating apps/social media over weeks/months, then introduces fake crypto trading platform.",
+      "indicators": [
+        "Match on Tinder/dating app or WhatsApp introduction",
+        "Romantic relationship developed first",
+        "Then introduction to crypto trading 'opportunity'",
+        "Fake crypto platforms with initial fake profits shown",
+        "Difficulty withdrawing, escalating 'fees' demanded",
+        "Long-term emotional manipulation (weeks/months)"
+      ]
+    },
+    "Fraud/Investment-Fraud/Other-Investment-Fraud": {
+      "general": "Investment scams WITHOUT romance component: fake trading platforms, Ponzi schemes, fake brokers, fake ICOs. Cold contact via phone, email, or social media ads.",
+      "indicators": [
+        "Cold contact (no prior relationship)",
+        "Fake brokers, trading platforms",
+        "Promises of high daily returns (e.g., 3% per day)",
+        "Ponzi structure (recruit others for bonuses)",
+        "Pressure to deposit quickly",
+        "No romantic relationship built first"
+      ]
+    }
+  }
+}

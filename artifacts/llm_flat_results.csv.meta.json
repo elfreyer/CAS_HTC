@@ -1,0 +1,25 @@
+{
+  "git_commit": "091607e",
+  "timestamp": "2026-06-15T07:24:18",
+  "encoder": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+  "max_length": 128,
+  "ollama_host": "http://missminutess-mac-studio.local:11434",
+  "host_slug": "http://missminutess-mac-studio.local:11434",
+  "models": {
+    "gemma4:e4b": "c6eb396dbd5992bbe3f5cdb947e8bbc0ee413d7c17e2beaae69f5d569cf982eb",
+    "gemma4:26b": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251"
+  },
+  "n_rows_expected": 5200,
+  "options": {
+    "temperature": 0.0,
+    "seed": 42,
+    "think": false,
+    "num_predict": 100,
+    "num_ctx_by_condition": {
+      "0a": 16384,
+      "0b": 16384,
+      "3": 16384,
+      "8": 32768
+    }
+  }
+}
